@@ -1,0 +1,116 @@
+/* Container que envolve o botão */
+/* & .toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+} */
+
+/* Esconde o checkbox */
+& .toggle {
+    display: none;
+}
+
+/* Estiliza o botão */
+.toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: 300ms;
+}
+
+.toggle-label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    transition: transform 0.3s;
+}
+
+/* Altera o botão quando marcado */
+.toggle:checked+.toggle-label {
+    background: #333;
+    border: 1px solid #fff;
+}
+
+.toggle:checked+.toggle-label::after {
+    transform: translateX(25px);
+    background: yellow;
+}
+
+/* Aplica o dark mode usando :has() */
+body:has(.toggle:checked) {
+    background-color: #1a1a1a;
+
+    & header {
+        & .container-header {
+            background-color: #1a1a1a;
+
+
+            & .conteudo-header h1 {
+                color: #e0e0e0;
+            }
+
+        }
+    }
+
+    & main {
+        & .container-sobre {
+            & .conteudo-sobre {
+
+                h3,
+                p {
+                    color: #e0e0e0;
+                }
+
+                & .paragrafo-especial {
+                    border-left: 1px solid #ffffff7e;
+                }
+            }
+
+        }
+
+        & .container-contato{
+            background-color: #d9212156;
+        }
+
+        & .container-contato p {
+            color: #e0e0e0;
+            background-color: #460000;
+        }
+
+        & .container-cadastro {
+            & form {
+
+                & .conteudo-cadastro h3,
+                p {
+                    color: #e0e0e0;
+                }
+
+                & .preenchimento {
+
+                    & .dados-pessoais legend,
+                    label,
+                    .dados-cnh legend,
+                    .dados-carro legend {
+                        color: #e0e0e0;
+                    }
+
+                    & button{
+                        color: #e0e0e0;
+                        background-color: #d9212156;
+                    }
+                }
+            }
+        }
+    }
+}

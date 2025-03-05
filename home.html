@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluCar - Home</title>
+    <link rel="stylesheet" href="Estilos/home.css">
+    <link rel="stylesheet" href="Estilos/darkmode.css">
+</head>
+
+<body>
+    <header>
+        <section class="container-header">
+            <section class="conteudo-header secao-limitada">
+                <h1>AluCar</h1>
+                <div class="toggle-container">
+                    <input type="checkbox" id="toggle" class="toggle">
+                    <label for="toggle" class="toggle-label"></label>
+                </div>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <section class="container-banner">
+            <div>
+                <h2 class="secao-limitada">AluCar<br>Aluguel de Carros</br></h2>
+            </div>
+        </section>
+
+        <section class="container-sobre secao-limitada">
+            <section class="conteudo-sobre">
+                <h3>Sobre nós</h3>
+                <p>Há 45 anos atuando na área de locação de veículos com segurança e garantia de satisfação.
+                    Temos os melhores preços e modelos do mercado.</p>
+                <div class="catalago-imagens">
+                    <img src="Imagens/img1.jpg">
+                    <img src="Imagens/img2.jpg">
+                    <img src="Imagens/img3.jpg">
+                </div>
+
+                <p class="paragrafo-especial">O compromisso da AluCar é com a qualidade.</p>
+                <p class="paragrafo-especial">Os melhores carros estão aqui!</p>
+                <p class="paragrafo-especial">Assistência 24hrs.</p>
+            </section>
+        </section>
+
+        <section class="container-contato">
+            <p>Contato</p>
+        </section>
+
+        <section class="container-cadastro secao-limitada">
+            <form method="post" action="https://www.devmedia.com.br/codigos/formularios/aula9/">
+                <section class="conteudo-cadastro">
+                    <h3>Análise de Cadastro</h3>
+                    <p>Preencha os campos abaixo e analisaremos seus dados. Se tudo estiver correto ligaremos para
+                        marcar
+                        uma visita sua à loja.</p>
+                </section>
+
+                <section class="preenchimento">
+
+                    <fieldset class="dados-pessoais">
+                        <legend>Dados Pessoais</legend>
+
+                        <label>Nome</label>
+                        <input type="text" name="nome" placeholder="Informe seu nome" required>
+
+                        <label>Data de Nascimento</label>
+                        <input type="date" name="data-de-nascimento" required>
+
+                        <label>Telefone</label>
+                        <input type="tel" name="telefone" minlength="11" placeholder="(XX) X XXXX-XXXX" required>
+                    </fieldset>
+
+                    <fieldset class="dados-cnh">
+                        <legend>CNH</legend>
+
+                        <label>Número do Registro</label>
+                        <input type="number" name="numero-cnh" placeholder="Informe o Número da Sua CNH" required>
+
+                        <label>Validade</label>
+                        <input type="date" name="validade-cnh" required>
+                    </fieldset>
+
+                    <fieldset class="dados-carro">
+                        <legend>Carro</legend>
+
+                        <select class="selecao-carros" name="carros" required>
+                            <option value="">Selecione o Carro</option>
+                            <option value="carro01">Teste 01</option>
+                            <option value="carro02">Teste 02</option>
+                        </select>
+                    </fieldset>
+
+                    <button type="submit">Enviar Dados</button>
+                </section>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <section class="container-footer">
+            <p>Copyright 2022 - AluCar</p>
+            <p>Desenvolvido por
+                <a href="https://github.com/CiprianoJr25" target="_blank">Cipriano Jr</a>
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html>
